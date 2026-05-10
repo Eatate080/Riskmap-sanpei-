@@ -14,3 +14,9 @@
     8．実行環境(仮想環境)を洗濯
     9．Ctrl＋Shift＋＠
     10．python 実行ファイル.py
+
+    ターニングポイント1｛
+    cartopyでは解像度に限界があった。(zoomsizeを19倍にしたらopenstreetmapの制限に引っかかった)
+    ｝
+
+    
