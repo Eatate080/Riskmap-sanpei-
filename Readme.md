@@ -1,0 +1,3 @@
+仮想環境はMiniconda　mambaを想定
+
+また主の仮想環境名はriskmap_env
