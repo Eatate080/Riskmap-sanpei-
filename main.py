@@ -60,7 +60,7 @@ if 0 <= len(json_load) < 6 :
         opacity: 0.98; 
         top: 10px; 
         left: 20px; 
-        width: 40%;
+        width: 30%;
         z-index: 9997;
         background-color: rgba(255, 255, 255, 0.9);
         padding: 15px;
@@ -107,7 +107,7 @@ elif 6 <= len(json_load) < 11:
         opacity: 0.98; 
         top: 10px; 
         left: 20px; 
-        width: 40%;
+        width: 30%;
         z-index: 9997;
         background-color: rgba(255, 255, 255, 0.9);
         padding: 15px;
@@ -152,7 +152,7 @@ elif 11 <= len(json_load) :
         position: fixed; 
         top: 10px; 
         left: 20px; 
-        width: 40%;
+        width: 30%;
         z-index: 9997;
         background-color: rgba(255, 255, 255, 0.9);
         padding: 15px;
