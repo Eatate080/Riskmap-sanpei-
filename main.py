@@ -53,24 +53,145 @@ for case_data in json_load.values():
     ).add_to(folium_map)
 
     
+if 0 <= len(json_load) < 6 :
+    fixed_panel_html = f"""
+    <div id="side-panel" style="
+        position: fixed;
+        opacity: 0.98; 
+        top: 10px; 
+        left: 20px; 
+        width: 40%;
+        z-index: 9997;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 15px;
+        padding-top: 50px;
+        border-left: 5px solid red;
+        border-radius: 8px;
+        font-family: sans-serif;
+        ">
+        <h1 style="margin-top:0px;"><b>名寄市 <br>危険エリア最新情報 </br></b></h1>
+        <p></p>
+        <p><b>ダニ被害発生件数:</b> <b>{len(json_load)}件</b></p>
 
-fixed_panel_html = f"""
-<div id="side-panel" style="
-    position: fixed; 
-    top: 20px; 
-    right: 20px; 
-    width: 600px;
-    z-index: 9999;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 15px;
-    border: 2px solid #333;
-    border-radius: 8px;
-    font-family: sans-serif;
-    ">
-    <h4 style="margin-top:0;">最新ステータス</h4>
-    <p><b>ダニ被害発生件数:</b> {len(json_load)}件</p>
+    </div>
 
-</div>
-"""
+    <div id ="danger_level_panel" style="
+        position: fixed;
+        opacity: 0.98;
+        top: 20px;
+        left: 40px;
+        width: 110px;
+        height: 30px;
+        padding: 10px;
+        padding-bottom: 2px;
+        z-index: 9998;
+        background-color: red;
+        color: white;
+        border-radius:20px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size:12px;
+        font-weight: bold;
+        font-family: sans-serif;
+        ">
+        <p style="margin-top:0;"><b>警戒レベル：高</b></p>
+        </div>
+    """
+elif 6 <= len(json_load) < 11:
+        fixed_panel_html = f"""
+    <div id="side-panel" style="
+        position: fixed;
+        opacity: 0.98; 
+        top: 10px; 
+        left: 20px; 
+        width: 40%;
+        z-index: 9997;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 15px;
+        padding-top: 50px;
+        border-left: 5px solid orange;
+        border-radius: 8px;
+        font-family: sans-serif;
+        ">
+        <h1 style="margin-top:0px;"><b>名寄市 <br>危険エリア最新情報 </br></b></h1>
+        <p></p>
+        <p><b>ダニ被害発生件数:</b> <b>{len(json_load)}件</b></p>
+
+    </div>
+
+    <div id ="danger_level_panel" style="
+        position: fixed;
+        top: 20px;
+        left: 40px;
+        width: 110px;
+        height: 30px;
+        padding: 10px;
+        padding-bottom: 2px;
+        z-index: 9998;
+        background-color: orange;
+        color: white;
+        border-radius:20px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size:12px;
+        font-weight: bold;
+        font-family: sans-serif;
+        ">
+        <p style="margin-top:0;"><b>警戒レベル：中</b></p>
+        </div>
+    """
+elif 11 <= len(json_load) :
+             fixed_panel_html = f"""
+    <div id="side-panel" style="
+        position: fixed; 
+        top: 10px; 
+        left: 20px; 
+        width: 40%;
+        z-index: 9997;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 15px;
+        padding-top: 50px;
+        border-left: 5px solid limegreen;
+        border-radius: 8px;
+        font-family: sans-serif;
+        ">
+        <h1 style="margin-top:0px;"><b>名寄市 <br>危険エリア最新情報 </br></b></h1>
+        <p></p>
+        <p><b>ダニ被害発生件数:</b> <b>{len(json_load)}件</b></p>
+
+    </div>
+
+    <div id ="danger_level_panel" style="
+        position: fixed;
+        top: 20px;
+        left: 40px;
+        width: 110px;
+        height: 30px;
+        padding: 10px;
+        padding-bottom: 2px;
+        z-index: 9998;
+        background-color: limegreen;
+        color: white;
+        border-radius:20px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size:12px;
+        font-weight: bold;
+        font-family: sans-serif;
+        ">
+        <p style="margin-top:0;"><b>警戒レベル：低</b></p>
+        </div>
+        """
+
+
 folium_map.get_root().html.add_child(Element(fixed_panel_html))
 folium_map.save("riskmap.html")

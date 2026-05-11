@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_7a8dcd2b8e522734fcc0bf406714369c {
+                #map_f86c8ebfa926de2c604a2c7b9482f654 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -54,31 +54,60 @@
 <body>
     
     
-<div id="side-panel" style="
-    position: fixed; 
-    top: 20px; 
-    right: 20px; 
-    width: 600px;
-    z-index: 9999;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 15px;
-    border: 2px solid #333;
-    border-radius: 8px;
-    font-family: sans-serif;
-    ">
-    <h4 style="margin-top:0;">最新ステータス</h4>
-    <p><b>ダニ被害発生件数:</b> 3件</p>
+    <div id="side-panel" style="
+        position: fixed;
+        opacity: 0.98; 
+        top: 10px; 
+        left: 20px; 
+        width: 40%;
+        z-index: 9997;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 15px;
+        padding-top: 50px;
+        border-left: 5px solid red;
+        border-radius: 8px;
+        font-family: sans-serif;
+        ">
+        <h1 style="margin-top:0px;"><b>名寄市 <br>危険エリア最新情報 </br></b></h1>
+        <p></p>
+        <p><b>ダニ被害発生件数:</b> <b>3件</b></p>
 
-</div>
+    </div>
+
+    <div id ="danger_level_panel" style="
+        position: fixed;
+        opacity: 0.98;
+        top: 20px;
+        left: 40px;
+        width: 110px;
+        height: 30px;
+        padding: 10px;
+        padding-bottom: 2px;
+        z-index: 9998;
+        background-color: red;
+        color: white;
+        border-radius:20px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size:12px;
+        font-weight: bold;
+        font-family: sans-serif;
+        ">
+        <p style="margin-top:0;"><b>警戒レベル：高</b></p>
+        </div>
     
-            <div class="folium-map" id="map_7a8dcd2b8e522734fcc0bf406714369c" ></div>
+    
+            <div class="folium-map" id="map_f86c8ebfa926de2c604a2c7b9482f654" ></div>
         
 </body>
 <script>
     
     
-            var map_7a8dcd2b8e522734fcc0bf406714369c = L.map(
-                "map_7a8dcd2b8e522734fcc0bf406714369c",
+            var map_f86c8ebfa926de2c604a2c7b9482f654 = L.map(
+                "map_f86c8ebfa926de2c604a2c7b9482f654",
                 {
                     center: [44.35, 142.46],
                     crs: L.CRS.EPSG3857,
@@ -95,7 +124,7 @@
 
         
     
-            var tile_layer_5a94037936306838cb8a4cbf10e2b661 = L.tileLayer(
+            var tile_layer_d11cb75a6009c199553763bb782e485d = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -112,17 +141,17 @@
             );
         
     
-            tile_layer_5a94037936306838cb8a4cbf10e2b661.addTo(map_7a8dcd2b8e522734fcc0bf406714369c);
+            tile_layer_d11cb75a6009c199553763bb782e485d.addTo(map_f86c8ebfa926de2c604a2c7b9482f654);
         
     
-            var marker_c4664bad5cf5129cc6424a1b1676085d = L.marker(
+            var marker_a04dba75210065645f168cfe9afa13d4 = L.marker(
                 [44.33407, 142.45689],
                 {
 }
-            ).addTo(map_7a8dcd2b8e522734fcc0bf406714369c);
+            ).addTo(map_f86c8ebfa926de2c604a2c7b9482f654);
         
     
-            marker_c4664bad5cf5129cc6424a1b1676085d.bindTooltip(
+            marker_a04dba75210065645f168cfe9afa13d4.bindTooltip(
                 `<div>
                      さんぺい動物病院はこちら
                  </div>`,
@@ -133,13 +162,13 @@
             );
         
     
-            var circle_e25f808f04191414d6d276439f68509b = L.circle(
+            var circle_d94f063101b586c6e4adf1784a5e093b = L.circle(
                 [44.34599944172019, 142.47096750805483],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50, "stroke": true, "weight": 3}
-            ).addTo(map_7a8dcd2b8e522734fcc0bf406714369c);
+            ).addTo(map_f86c8ebfa926de2c604a2c7b9482f654);
         
     
-            circle_e25f808f04191414d6d276439f68509b.bindTooltip(
+            circle_d94f063101b586c6e4adf1784a5e093b.bindTooltip(
                 `<div>
                      名寄神社の付近の草むら
                  </div>`,
@@ -150,13 +179,13 @@
             );
         
     
-            var circle_5fe368cdd788a6cd1533f4d2618e1f73 = L.circle(
+            var circle_5d3d7e634a1375462423e14c9e578ae7 = L.circle(
                 [44.34540865376615, 142.46920797917352],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50, "stroke": true, "weight": 3}
-            ).addTo(map_7a8dcd2b8e522734fcc0bf406714369c);
+            ).addTo(map_f86c8ebfa926de2c604a2c7b9482f654);
         
     
-            circle_5fe368cdd788a6cd1533f4d2618e1f73.bindTooltip(
+            circle_5d3d7e634a1375462423e14c9e578ae7.bindTooltip(
                 `<div>
                      野口雨情文学碑の付近の草むら
                  </div>`,
@@ -167,13 +196,13 @@
             );
         
     
-            var circle_ece807286b55f8e518e0017b2fc943a6 = L.circle(
+            var circle_fefd43dae08b1e12de923b1ff229f73d = L.circle(
                 [44.342411464218884, 142.4660794043873],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50, "stroke": true, "weight": 3}
-            ).addTo(map_7a8dcd2b8e522734fcc0bf406714369c);
+            ).addTo(map_f86c8ebfa926de2c604a2c7b9482f654);
         
     
-            circle_ece807286b55f8e518e0017b2fc943a6.bindTooltip(
+            circle_fefd43dae08b1e12de923b1ff229f73d.bindTooltip(
                 `<div>
                      SLの付近の草むら
                  </div>`,
