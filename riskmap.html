@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_2c205fff51b0de7bc72c61bbaa3d2c45 {
+                #map_027d5935c7c3bf888baa997ae5eb0235 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -59,7 +59,7 @@
         opacity: 0.98; 
         top: 10px; 
         left: 20px; 
-        width: 30%;
+        width: 38%;
         z-index: 9997;
         background-color: rgba(255, 255, 255, 0.9);
         padding: 15px;
@@ -70,7 +70,8 @@
         ">
         <h1 style="margin-top:0px;"><b>名寄市 <br>危険エリア最新情報 </br></b></h1>
         <p></p>
-        <p><b>ダニ被害発生件数:</b> <b>3件</b></p>
+        <p><b>ダニ被害発生件数:</b> <b>2件</b></p>
+        <p>被害の発生範囲は目安となりますので、あらかじめご了承ください。<br>また、ダニの生態上、<b>1</b>件の発生でも周囲に多数潜んでいると考えるのが自然です。</br><br>そのため、事前の想定と早めの対処をおすすめします。</br></p>
 
     </div>
 
@@ -100,14 +101,14 @@
         </div>
     
     
-            <div class="folium-map" id="map_2c205fff51b0de7bc72c61bbaa3d2c45" ></div>
+            <div class="folium-map" id="map_027d5935c7c3bf888baa997ae5eb0235" ></div>
         
 </body>
 <script>
     
     
-            var map_2c205fff51b0de7bc72c61bbaa3d2c45 = L.map(
-                "map_2c205fff51b0de7bc72c61bbaa3d2c45",
+            var map_027d5935c7c3bf888baa997ae5eb0235 = L.map(
+                "map_027d5935c7c3bf888baa997ae5eb0235",
                 {
                     center: [44.35, 142.46],
                     crs: L.CRS.EPSG3857,
@@ -124,7 +125,7 @@
 
         
     
-            var tile_layer_fa390af42341e708cdea3e06a7d4964b = L.tileLayer(
+            var tile_layer_70ec2a98881788f1a82963839d3c919f = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -141,17 +142,17 @@
             );
         
     
-            tile_layer_fa390af42341e708cdea3e06a7d4964b.addTo(map_2c205fff51b0de7bc72c61bbaa3d2c45);
+            tile_layer_70ec2a98881788f1a82963839d3c919f.addTo(map_027d5935c7c3bf888baa997ae5eb0235);
         
     
-            var marker_5cf4ca46af1ef0f455628eb74bd5fb9f = L.marker(
+            var marker_9ea744e7756f12cba22dcecea63754e4 = L.marker(
                 [44.33407, 142.45689],
                 {
 }
-            ).addTo(map_2c205fff51b0de7bc72c61bbaa3d2c45);
+            ).addTo(map_027d5935c7c3bf888baa997ae5eb0235);
         
     
-            marker_5cf4ca46af1ef0f455628eb74bd5fb9f.bindTooltip(
+            marker_9ea744e7756f12cba22dcecea63754e4.bindTooltip(
                 `<div>
                      さんぺい動物病院はこちら
                  </div>`,
@@ -162,15 +163,15 @@
             );
         
     
-            var circle_c0d90f1ef0d0f517e20419900f162280 = L.circle(
-                [44.34599944172019, 142.47096750805483],
-                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50, "stroke": true, "weight": 3}
-            ).addTo(map_2c205fff51b0de7bc72c61bbaa3d2c45);
+            var circle_1231c6403150441252b652e2a87c2024 = L.circle(
+                [44.294783088950574, 142.42222676319818],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 100, "stroke": true, "weight": 3}
+            ).addTo(map_027d5935c7c3bf888baa997ae5eb0235);
         
     
-            circle_c0d90f1ef0d0f517e20419900f162280.bindTooltip(
+            circle_1231c6403150441252b652e2a87c2024.bindTooltip(
                 `<div>
-                     名寄神社の付近の草むら
+                     風連町大町
                  </div>`,
                 {
   "permanent": true,
@@ -179,32 +180,15 @@
             );
         
     
-            var circle_aca67b72bb010fa52b95fb233e15390e = L.circle(
-                [44.34540865376615, 142.46920797917352],
-                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50, "stroke": true, "weight": 3}
-            ).addTo(map_2c205fff51b0de7bc72c61bbaa3d2c45);
+            var circle_a11b49446c3d3e3cd7158520c99c261f = L.circle(
+                [44.30689159210325, 142.33036563221773],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3000, "stroke": true, "weight": 3}
+            ).addTo(map_027d5935c7c3bf888baa997ae5eb0235);
         
     
-            circle_aca67b72bb010fa52b95fb233e15390e.bindTooltip(
+            circle_a11b49446c3d3e3cd7158520c99c261f.bindTooltip(
                 `<div>
-                     野口雨情文学碑の付近の草むら
-                 </div>`,
-                {
-  "permanent": true,
-  "sticky": false,
-}
-            );
-        
-    
-            var circle_d8e1b81b9c6180d86cbd8367e847857f = L.circle(
-                [44.342411464218884, 142.4660794043873],
-                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50, "stroke": true, "weight": 3}
-            ).addTo(map_2c205fff51b0de7bc72c61bbaa3d2c45);
-        
-    
-            circle_d8e1b81b9c6180d86cbd8367e847857f.bindTooltip(
-                `<div>
-                     SLの付近の草むら
+                     風連町西風連
                  </div>`,
                 {
   "permanent": true,

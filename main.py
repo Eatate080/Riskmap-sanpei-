@@ -42,7 +42,7 @@ calte1name = json_load['CASE1']['memo']
 
 fm.Circle(
     location=[calte1lat,calte1lon],
-    radius=200,
+    radius=100,
     tooltip = fm.Tooltip(calte1name,permanent=True,sticky=False),
     color = "red",
     fill= True,
@@ -50,7 +50,7 @@ fm.Circle(
     fill_opacity=0.3   
     ).add_to(folium_map)
 
-
+#現段階の上川郡のにそこまでデータが無い
 
 calte2lat = json_load['CASE2']['lat']
 calte2lon = json_load['CASE2']['lon']
@@ -66,19 +66,19 @@ fm.Circle(
     fill_opacity=0.3   
     ).add_to(folium_map)
 
-calte3lat = json_load['CASE3']['lat']
-calte3lon = json_load['CASE3']['lon']
-calte3name = json_load['CASE3']['memo']
+# calte3lat = json_load['CASE3']['lat']
+# calte3lon = json_load['CASE3']['lon']
+# calte3name = json_load['CASE3']['memo']
 
-fm.Circle(
-    location=[calte3lat,calte3lon],
-    radius=50,
-    tooltip = fm.Tooltip(calte3name,permanent=True,sticky=False),
-    color = "red",
-    fill= True,
-    fill_color="red",
-    fill_opacity=0.3   
-    ).add_to(folium_map)
+# fm.Circle(
+#     location=[calte3lat,calte3lon],
+#     radius=50,
+#     tooltip = fm.Tooltip(calte3name,permanent=True,sticky=False),
+#     color = "red",
+#     fill= True,
+#     fill_color="red",
+#     fill_opacity=0.3   
+#     ).add_to(folium_map)
 
 #範囲がまばらなため今回は一様なサークルは使用しない
 
@@ -118,7 +118,7 @@ if 0 <= len(json_load) < 6 :
         border-radius: 8px;
         font-family: sans-serif;
         ">
-        <h1 style="margin-top:0px;"><b>上川郡 <br>危険エリア最新情報 </br></b></h1>
+        <h1 style="margin-top:0px;"><b>名寄市 <br>危険エリア最新情報 </br></b></h1>
         <p></p>
         <p><b>ダニ被害発生件数:</b> <b>{len(json_load)}件</b></p>
         <p>被害の発生範囲は目安となりますので、あらかじめご了承ください。<br>また、ダニの生態上、<b>1</b>件の発生でも周囲に多数潜んでいると考えるのが自然です。</br><br>そのため、事前の想定と早めの対処をおすすめします。</br></p>
