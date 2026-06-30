@@ -1,0 +1,12 @@
+name: riskmap-env
+channel:
+  - conda-forge
+
+dependencies:
+  - python=3.11
+  - matplotlib==3.8.0
+  - cartopy
+  - contextily
+  - folium
+  - python-dotenv
+  - requests
